@@ -13,18 +13,19 @@ var state = ['Pending', 'Completed', 'Running', 'Accepted', 'Rejected'];
 
 	<div ng-controller="coDataGrabberCtrl">
 		<table>
-		<th>
+		<tr>
 			<td>Changelist/Build</td>
 			<td>Owner</td>
 			<td>Time Started</td>
 			<td>State</td>
-		</th>
+		</tr>
 		<tr ng-repeat="row in results">
 			<td>{{ row.id }}</td>
 			<td>{{ row.owner }}</td>
 			<td>{{ row.time_started }}</td>
 			<td>{{ row.state }}</td>
 		</tr>
+
 		</table>
 	</div>	
 
