@@ -8,27 +8,37 @@
 var state = ['Pending', 'Completed', 'Running', 'Accepted', 'Rejected'];
 		</script>
 		<link href="css/style.css" rel="Stylesheet" />
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://i.icomoon.io/public/temp/14c447afb9/UntitledProject/style.css">
 	</head>
 <body ng-app="coApp">
-
+<div id="wrapper">
 	<div ng-controller="coDataGrabberCtrl">
-		<table>
+		<table cellspacing="10">
 		<tr>
-			<td>Changelist/Build</td>
-			<td>Owner</td>
-			<td>Time Started</td>
-			<td>State</td>
+			<th>Changelist/Build</th>
+			<th>Owner</th>
+			<th>Time Started</th>
+			<th>State</th>
+			<th>Metrics</th>
+			<th>Build</th>
+			<th>Unit Test</th>
+			<th>Functional Test</th>
 		</tr>
 		<tr ng-repeat="row in results">
-			<td>{{ row.id }}</td>
+			<td><span class="icon-display"></span> {{ row.id }}</td>
 			<td>{{ row.owner }}</td>
-			<td>{{ row.time_started }}</td>
+			<td>{{ row.time_started | date : 'short' }}</td>
 			<td>{{ row.state }}</td>
+			<td>{{ row.state }}</td>
+			<td>{{ row.build }}</td>
+			<td>{{ row.unit_test.state }}</td>
+			<td>{{ row.fn_test.state }}</td>
 		</tr>
 
 		</table>
 	</div>	
-
+</div>
 
 </body>
 </html>

@@ -1,23 +1,23 @@
 [{
   "id": "Tenrox-R1_1235",
-  "owner": "owner[0]",
-  "time_started" : "Thu Jun 16 2016 21:28:21 GMT+0530 (India Standard Time)",
-  "state": "state[0]",
+  "owner": "",
+  "time_started" : "2016-01-05T09:05:05.035Z",
+  "state": "Pending",
   "metrics": {
     "test": 0,
     "maintainability": 0,
     "security": 0,
     "workmanship": 0
   },
-  "build": "state[0]",
+  "build": "Pending",
   "unit_test": {
-      "state": "state[0]",
+      "state": "Pending",
       "passed": 0,
       "failed": 0,
       "code_covered": 0
     },
   "fn_test": {
-      "state": "state[0]",
+      "state": "Pending",
       "passed": 0,
       "failed": 0,
       "code_covered": 0
@@ -27,9 +27,9 @@
 
 {
   "id": 432462,
-  "owner": "owner[1]",
-  "time_started" : "Thu Jun 16 2016 23:18:41 GMT+0530 (India Standard Time)",
-  "state": "state[2]",
+  "owner": "jtuck",
+  "time_started" : "2016-03-05T19:05:05.035Z",
+  "state": "Running",
   "metrics": {
     "running": 33,
     "test": 22,
@@ -37,15 +37,15 @@
     "security": 42,
     "workmanship": 54
   },
-  "build": "state[0]",
+  "build": "Pending",
   "unit_test": {
-      "state": "state[0]",
+      "state": "Pending",
       "passed": 10,
       "failed": 4,
       "code_covered": 25
     },
   "fn_test": {
-      "state": "state[0]",
+      "state": "Pending",
       "passed": 167,
       "failed": 322,
       "code_covered": 12
@@ -55,24 +55,24 @@
 
 {
   "id": 432461,
-  "owner": "owner[2]",
-  "time_started" : "Thu Jun 16 2016 03:18:41 GMT+0530 (India Standard Time)",
-  "state": "state[4]",
+  "owner": "samy",
+  "time_started" : "2016-11-17T19:55:35.035Z",
+  "state": "Rejected",
   "metrics": {
     "test": 64,
     "maintainability": 53,
     "security": 64,
     "workmanship": 72
   },
-  "build": "state[1]",
+  "build": "Completed",
   "unit_test": {
-      "state": "state[1]",
+      "state": "Completed",
       "passed": 142,
       "failed": 10,
       "code_covered": 76
     },
   "fn_test": {
-      "state": "state[1]",
+      "state": "Completed",
       "passed": 4321,
       "failed": 2145,
       "code_covered": 23
@@ -82,24 +82,24 @@
 
 {
   "id": "Tenrox-R1_1234",
-  "owner": "owner[0]",
-  "time_started" : "Thu Jun 15 2016 03:22:59 GMT+0530 (India Standard Time)",
-  "state": "state[1]",
+  "owner": "",
+  "time_started" : "2016-02-02T02:01:05.035Z",
+  "state": "Completed",
   "metrics": {
     "test": 64,
     "maintainability": 53,
     "security": 64,
     "workmanship": 72
   },
-  "build": "state[1]",
+  "build": "Completed",
   "unit_test": {
-      "state": "state[1]",
+      "state": "Completed",
       "passed": 142,
       "failed": 10,
       "code_covered": 76
     },
   "fn_test": {
-      "state": "state[1]",
+      "state": "Completed",
       "passed": 4321,
       "failed": 2145,
       "code_covered": 23
@@ -109,24 +109,24 @@
 
 {
   "id": 432460,
-  "owner": "owner[2]",
-  "time_started" : "Thu Jun 05 2016 13:42:49 GMT+0530 (India Standard Time)",
-  "state": "state[4]",
+  "owner": "samy",
+  "time_started" : "2016-03-02T15:06:39.035Z",
+  "state": "Rejected",
   "metrics": {
     "test": 74,
     "maintainability": 23,
     "security": 44,
     "workmanship": 92
   },
-  "build": "state[0]",
+  "build": "Pending",
   "unit_test": {
-      "state": "state[0]",
+      "state": "Pending",
       "passed": 0,
       "failed": 0,
       "code_covered": 0
     },
   "fn_test": {
-      "state": "state[0]",
+      "state": "Pending",
       "passed": 0,
       "failed": 0,
       "code_covered": 0
@@ -136,24 +136,24 @@
 
 {
   "id": 432459,
-  "owner": "owner[2]",
-  "time_started" : "Thu Jun 15 2016 11:22:29 GMT+0530 (India Standard Time)",
-  "state": "state[1]",
+  "owner": "samy",
+  "time_started" : "2016-08-20T09:05:05.035Z",
+  "state": "Completed",
   "metrics": {
     "test": 174,
     "maintainability": 123,
     "security": 144,
     "workmanship": 292
   },
-  "build": "state[1]",
+  "build": "Completed",
   "unit_test": {
-      "state": "state[1]",
+      "state": "Completed",
       "passed": 342,
       "failed": 12,
       "code_covered": 100
     },
   "fn_test": {
-      "state": "state[1]",
+      "state": "Completed",
       "passed": 5467,
       "failed": 126,
       "code_covered": 100
