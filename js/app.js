@@ -32,5 +32,4 @@ coApp.service("coAppService", function($http, $q){
 	else{
 		$scope.divbar = 0;
 	}
-	console.log($scope.row.state + "asdfasdf");
 });
