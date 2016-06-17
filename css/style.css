@@ -7,8 +7,23 @@
     content: "\e956";
 }
 
-table{border-collapse: collapse !important; border-spacing: 0 1em;}
-table tr{border: 5px solid black;}
+table{border-collapse: collapse !important; border-spacing: 10px 10px;width:100%;}
+table tbody{border: 0px;}
+table tr{border: 1px solid black; padding:10px;margin:1em 0;}
+table tr:first-child{border:0px;}
+table tr td{padding: 20px;text-align: center;}
+table tr th{padding: 5px 20px;text-align: center;}
+table tr td:first-child{text-align: left}
+.borderless{border:0px;}
+.spacer{padding:5px 0;}
+
+.ng-scope{text-align: center;}
+.tablewrapper{
+    padding:10px;
+    margin:5px;
+    background-color:#f3f3f3;
+}
+
 /*
 tr {
 				width: 94% !important; 

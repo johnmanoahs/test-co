@@ -1,1 +1,51 @@
-testing...
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="js/angular.min.js"></script>
+		<script src="js/app.js"></script>
+		<script>
+			var owner = [null, 'jtuck', 'samy'];
+var state = ['Pending', 'Completed', 'Running', 'Accepted', 'Rejected'];
+		</script>
+		<link href="css/style.css" rel="Stylesheet" />
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://i.icomoon.io/public/temp/14c447afb9/UntitledProject/style.css">
+	</head>
+<body ng-app="coApp">
+<div id="wrapper">
+	<div ng-controller="coDataGrabberCtrl">
+		<table cellspacing="10">
+		<thead>
+		<tr>
+			<th>Changelist/Build</th>
+			<th>Owner</th>
+			<th>Time Started</th>
+			<th>State</th>
+			<th>Metrics</th>
+			<th>Build</th>
+			<th>Unit Test</th>
+			<th>Functional Test</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr ng-repeat="row in results">
+			<td><span class="icon-display"></span> {{ row.id }}</td>
+			<td>{{ row.owner }}</td>
+			<td>{{ row.time_started | date : 'short' }}</td>
+			<td>{{ row.state }}</td>
+			<td>{{ row.state }}</td>
+			<td>{{ row.build }}</td>
+			<td>{{ row.unit_test.state }}</td>
+			<td>{{ row.fn_test.state }}</td>
+		</tr>
+		<tr class="borderless">
+			<td colspan="8">Test</td>
+		</tr>
+		</tbody>
+		</table>
+	</div>	
+</div>
+
+</body>
+</html>
