@@ -7,12 +7,17 @@
     content: "\e956";
 }
 
+html{
+	font-size:12px;
+}
+
 table{border-collapse: collapse !important; border-spacing: 10px 10px;width:100%;}
 table tbody{border: 0px;}
-table tr{border: 1px solid black; padding:10px;margin:1em 0;}
+table tr{border: 1px solid black; padding:10px;margin:1em 0;vertical-align: middle;}
 table tr:first-child{border:0px;}
-table tr td{padding: 20px;text-align: center;}
-table tr th{padding: 5px 20px;text-align: center;}
+table tr td{padding: 10px;text-align: center;margin-left:auto;margin-right:auto;}
+table tr th{padding: 5px 10px;text-align: center;}
+table tr th:first-child{text-align: left}
 table tr td:first-child{text-align: left}
 .borderless{border:0px;}
 .spacer{padding:5px 0;}
@@ -21,9 +26,74 @@ table tr td:first-child{text-align: left}
 .tablewrapper{
     padding:10px;
     margin:5px;
-    background-color:#f3f3f3;
+    background-color: #f6f6f6;
+    border: 1px solid #dddddd;
 }
 
+.runningbar{
+	height:26px;
+	background-color:lightblue;overflow:hidden;display:block;
+}
+div.Pending, div.Accepted, div.Completed, div.Rejected, div.Running{height:30px;width:50px;border:2px solid #aaaaaa;margin:auto;}
+
+div.Pending{background: #999999;}
+div.Accepted, div.Completed{background: #299A0B; }
+div.Running{background: #f0f0f0;}
+div.Rejected{background: #A90329;}
+
+.selected{
+	height:200px;
+	vertical-align: top;
+}
+
+.Accepted, .Completed{
+	border: 2px solid #299A0B;
+	color: #299A0B;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f1fcd4+0,ffffff+50 */
+background: #f1fcd4; /* Old browsers */
+background: -moz-linear-gradient(left,  #f1fcd4 0%, #ffffff 50%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  #f1fcd4 0%,#ffffff 50%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  #f1fcd4 0%,#ffffff 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1fcd4', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+background-attachment:fixed;
+}
+
+.Pending{
+	border: 2px solid #999999;
+	color: #999999;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f0f0f0+0,ffffff+50 */
+background: #f0f0f0; /* Old browsers */
+background: -moz-linear-gradient(left,  #f0f0f0 0%, #ffffff 50%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  #f0f0f0 0%,#ffffff 50%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  #f0f0f0 0%,#ffffff 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f0f0', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+background-attachment:fixed;
+}
+
+.Running{
+	border: 2px solid #207CCA;
+	color: #207CCA;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#bed5dd+0,feffff+50 */
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eff9fc+0,feffff+50 */
+background: #eff9fc; /* Old browsers */
+background: -moz-linear-gradient(left,  #eff9fc 0%, #feffff 50%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  #eff9fc 0%,#feffff 50%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  #eff9fc 0%,#feffff 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eff9fc', endColorstr='#feffff',GradientType=1 ); /* IE6-9 */
+background-attachment:fixed;
+}
+
+.Rejected{
+	border: 2px solid #A90329;
+	color: #A90329;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffe5eb+0,ffffff+50 */
+background: #ffe5eb; /* Old browsers */
+background: -moz-linear-gradient(left,  #ffe5eb 0%, #ffffff 50%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  #ffe5eb 0%,#ffffff 50%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  #ffe5eb 0%,#ffffff 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffe5eb', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+background-attachment:fixed;
+}
 /*
 tr {
 				width: 94% !important; 

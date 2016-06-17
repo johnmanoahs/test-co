@@ -33,17 +33,31 @@ var state = ['Pending', 'Completed', 'Running', 'Accepted', 'Rejected'];
 		<tr class="borderless">
 			<td colspan="8" class="spacer"></td>
 		</tr>
-		<tr>
+		<tr ng-click="showHide(row)" class={{row.state}}>
 			<td><span class="icon-display"></span> {{ row.id }}</td>
 			<td>{{ row.owner }}</td>
 			<td>{{ row.time_started | date : 'short' }}</td>
 			<td>{{ row.state }}</td>
-			<td>{{ row.state }}</td>
-			<td>{{ row.build }}</td>
-			<td>{{ row.unit_test.state }}</td>
-			<td>{{ row.fn_test.state }}</td>
+			<td><div ng-controller="runningCtrl" class={{row.state}}><div class="runningbar" style="width:{{divbar}}px"></div></div></td>
+			<td><div class={{row.build}}></div></td>
+			<td><div class={{row.unit_test.state}}></div></td>
+			<td><div class={{row.fn_test.state}}></div></td>
 		</tr>
-		
+		</tbody>
+		<tbody class="ng-scope">
+		<tr class="borderless">
+			<td colspan="8" class="spacer"></td>
+		</tr>
+		<tr ng-click="showHide(row)" class="Accepted selected">
+			<td class="ng-binding"><span class="icon-display"></span> 432459</td>
+			<td class="ng-binding">samy</td>
+			<td class="ng-binding">8/20/16 2:35 PM</td>
+			<td class="ng-binding">Accepted</td>
+			<td><div class="Accepted"></div></td>
+			<td><div class="Completed"></div></td>
+			<td><div class="Completed"></div></td>
+			<td><div class="Completed"></div></td>
+		</tr>
 		</tbody>
 		</table>
 		</div>

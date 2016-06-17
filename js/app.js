@@ -18,4 +18,19 @@ coApp.service("coAppService", function($http, $q){
 		console.log($scope.results);
 	});
 
+	$scope.showHide = function(row){
+		$scope.classShowHide = row.state + ' selected';
+		console.log(row);
+	};
+
+})
+
+.controller("runningCtrl", function($scope){
+	if($scope.row.state == "Running"){
+		$scope.divbar = ($scope.row.metrics.running/100)*50;
+	}
+	else{
+		$scope.divbar = 0;
+	}
+	console.log($scope.row.state + "asdfasdf");
 });
