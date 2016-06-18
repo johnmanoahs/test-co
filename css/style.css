@@ -13,9 +13,9 @@ html{
 
 table{border-collapse: collapse !important; border-spacing: 10px 10px;width:100%;}
 table tbody{border: 0px;}
-table tr{border: 1px solid black; padding:10px;margin:1em 0;vertical-align: middle;}
+table tr{border: 1px solid black; padding:10px;margin:1em 0;vertical-align: top;}
 table tr:first-child{border:0px;}
-table tr td{padding: 10px;text-align: center;margin-left:auto;margin-right:auto;}
+table tr td{padding: 15px 10px 10px 10px;text-align: center;margin-left:auto;margin-right:auto;}
 table tr th{padding: 5px 10px;text-align: center;}
 table tr th:first-child{text-align: left}
 table tr td:first-child{text-align: left}
@@ -34,6 +34,7 @@ table tr td:first-child{text-align: left}
 	height:26px;
 	background-color:lightblue;overflow:hidden;display:block;
 }
+/*tr.Pending, tr.Accepted, tr.Completed, tr.Rejected, tr.Running{height:60px;}*/
 div.Pending, div.Accepted, div.Completed, div.Rejected, div.Running{height:30px;width:50px;border:2px solid #aaaaaa;margin:auto;}
 
 div.Pending{background: #999999;}
@@ -49,7 +50,7 @@ div.Rejected{background: #A90329;}
 
 .unselected{
 	transition: 0.6s;
-	height:70px;
+	height:60px;
 }
 
 .Accepted, .Completed{
