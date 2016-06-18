@@ -55,15 +55,21 @@ var state = ['Pending', 'Completed', 'Running', 'Accepted', 'Rejected'];
 		<tr class="expanderTR {{row.state}}" ng-class="selunselc">
 		<td colspan="8">
 			<div class="expanderDivWrapper clearfix" ng-show="selunselt">
-				<div class="edDivs {{row.state}}"></div>
-				<div class="edDivs {{row.build}}"></div>
-				<div class="edDivs {{row.unit_test.state}}"></div>
-				<div class="edDivs {{row.fn_test.state}}"></div>
-				<div class="edDivs"></div>
+				<div class="edDivs {{row.state}}">
+					<h4>Metrics</h4>
+					<div class="clearfix">
+						<div class="arrow-up green"></div>
+					</div>
+				</div>
+				<div class="edDivs {{row.build}}"><h4>Build</h4></div>
+				<div class="edDivs {{row.unit_test.state}}"><h4>Unit Test</h4></div>
+				<div class="edDivs {{row.fn_test.state}}"><h4>Functional Test</h4></div>
+				<div class="edDivs resultDiv"></div>
 			</div>
 		</td>
 		</tr>
 		</tbody>
+		<!--
 		<tbody class="ng-scope">
 		<tr class="borderless">
 			<td colspan="8" class="spacer"></td>
@@ -87,7 +93,7 @@ var state = ['Pending', 'Completed', 'Running', 'Accepted', 'Rejected'];
 			
 		</td>
 		</tr>
-		</tbody>
+		</tbody>-->
 		</table>
 		</div>
 	</div>	

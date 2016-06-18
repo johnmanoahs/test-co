@@ -12,6 +12,16 @@ html{
 	overflow-y: scroll;
 }
 
+h4, .h4{
+	margin-top:0 !important;
+	font-weight: bolder;
+}
+
+.arrow-up{
+	background: transparent url(images/arrow-up.png) no-repeat 0 0;
+	background-size: 100%;
+}
+
 table{border-collapse: collapse !important; border-spacing: 10px 10px;width:100%;}
 table tbody{border: 0px;}
 table tr{border: 1px solid black; padding:10px;margin:1em 0;vertical-align: top;}
@@ -58,9 +68,20 @@ div.min.Rejected{background: #A90329;}
 .edDivs{
 	height:140px;
 	width:18%;
-	border: 1px solid;
+	border: 2px solid;
 	float: left;
 	margin-right:20px;
+	padding:7px;
+	-webkit-box-shadow: 10px 10px 35px -17px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 35px -17px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 35px -17px rgba(0,0,0,0.75);
+}
+
+.resultDiv{
+	border:0px;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
 }
 
 tr.expanderTR.unselected, tr.expanderTR.unselected td{
