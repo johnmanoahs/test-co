@@ -33,9 +33,7 @@ var state = ['Pending', 'Completed', 'Running', 'Accepted', 'Rejected'];
 		<tr class="borderless">
 			<td colspan="8" class="spacer"></td>
 		</tr>
-		<!--<tr ng-click="sel = row.id" class="{{row.state}}" ng-class="row.id === sel ? 'selected' : 'unselected'"> -->
-		<!--<tr id="{{row.id}}" ng-controller="showHideCtrl as hs" ng-click="hs.expandthis($event, row.id)" class="{{row.state}}">-->
-		<tr id="{{row.id}}" ng-controller="showHideCtrl as hs" ng-click="hs.expandthis($index, row.id)" ng-class="{'selected' : num == $index}">
+		<tr ng-controller="showHideCtrl as sh" ng-click="sh.selectedRow(row.id)" ng-class={{row.state}}>
 			<td><span class="icon-display"></span> {{ row.id }}</td>
 			<td>{{ row.owner }}</td>
 			<td>{{ row.time_started | date : 'short' }}</td>

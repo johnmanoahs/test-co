@@ -15,13 +15,8 @@ coApp.service("coAppService", function($http, $q){
 	var promise = coAppService.getData();
 	promise.then(function(response){
 		$scope.results = response.data;
-		console.log($scope.results);
+		//console.log($scope.results);
 	});
-
-	$scope.showHide = function(row){
-		$scope.classShowHide = row.state + ' selected';
-		console.log(row);
-	};
 
 })
 
@@ -32,4 +27,25 @@ coApp.service("coAppService", function($http, $q){
 	else{
 		$scope.divbar = 0;
 	}
-});
+})
+
+.constant('prevSelected', '')
+
+.controller("showHideCtrl", ['prevSelected', function($scope, prevSelected){
+	this.sel = null;
+	$scope.num = 0 ;
+	//console.log(prevSelected);
+	this.expandthis = function(rowindex, rowid){
+		/*console.log(prevSelected)
+		$scope.sel = rowid;
+		angular.element(rowevent.target).addClass('selected');
+		if(prevSelected != ''){
+			var prevSelDiv = angular.element( document.querySelector( '#'+prevSelected ) );
+			prevSelDiv.removeClass('selected');
+			prevSelected = rowid;
+		}
+		*/
+		$scope.num = rowindex
+		console.log(rowindex);
+	}
+}]);

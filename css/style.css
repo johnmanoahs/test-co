@@ -42,8 +42,14 @@ div.Running{background: #f0f0f0;}
 div.Rejected{background: #A90329;}
 
 .selected{
+	transition: 0.6s;
 	height:200px;
 	vertical-align: top;
+}
+
+.unselected{
+	transition: 0.6s;
+	height:70px;
 }
 
 .Accepted, .Completed{
