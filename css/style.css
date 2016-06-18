@@ -9,6 +9,7 @@
 
 html{
 	font-size:12px;
+	overflow-y: scroll;
 }
 
 table{border-collapse: collapse !important; border-spacing: 10px 10px;width:100%;}
@@ -34,24 +35,84 @@ table tr td:first-child{text-align: left}
 	height:26px;
 	background-color:lightblue;overflow:hidden;display:block;
 }
-/*tr.Pending, tr.Accepted, tr.Completed, tr.Rejected, tr.Running{height:60px;}*/
-div.Pending, div.Accepted, div.Completed, div.Rejected, div.Running{height:30px;width:50px;border:2px solid #aaaaaa;margin:auto;}
+tr.Pending, tr.Accepted, tr.Completed, tr.Rejected, tr.Running{min-height:60px;}
+div.min.Pending, div.min.Accepted, div.min.Completed, div.min.Rejected, div.min.Running{height:30px;width:50px;border:2px solid #aaaaaa;margin:auto;}
 
-div.Pending{background: #999999;}
-div.Accepted, div.Completed{background: #299A0B; }
-div.Running{background: #f0f0f0;}
-div.Rejected{background: #A90329;}
+div.min.Pending{background: #999999;}
+div.min.Accepted, div.min.Completed{background: #299A0B; }
+div.min.Running{background: #f0f0f0;}
+div.min.Rejected{background: #A90329;}
 
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
+.expanderDivWrapper{
+	padding:20px;
+	display:block;
+}
+
+.edDivs{
+	height:140px;
+	width:18%;
+	border: 1px solid;
+	float: left;
+	margin-right:20px;
+}
+
+tr.expanderTR.unselected, tr.expanderTR.unselected td{
+	height:0px;
+	padding: 0px;
+	margin: 0px;
+}
+
+tr.expanderTR.selected, tr.expanderTR.selected td{
+	height:180px;
+	padding: 0px;
+	margin: 0px;
+}
+
+tr.expanderTR.Accepted, tr.expanderTR.Completed{
+	border: 2px SOLID #299A0B;
+	border-top: 0px;
+}
+
+tr.expanderTR.Pending{
+	border: 2px SOLID #999999;
+	border-top: 0px;
+}
+
+tr.expanderTR.Rejected{
+	border: 2px SOLID #A90329;
+	border-top: 0px;
+
+}
+
+tr.expanderTR.Running{
+	border: 2px SOLID #207CCA;
+	border-top: 0px;
+}
+
+tr.expanderTR, tr.expanderTR td{
+	border-top: 0px;
+	padding:0px;
+}
 .selected{
-	transition: 0.6s;
-	height:200px;
-	vertical-align: top;
+	height:60px;
+	min-height: 60px;
+	transition: height 0.6s;
 }
 
 .unselected{
-	transition: 0.6s;
 	height:60px;
+	min-height: 60px;
+	transition: height 0.6s;
 }
+
+.borderbottom0{border-bottom:0px !important;}
 
 .Accepted, .Completed{
 	border: 2px solid #299A0B;
@@ -67,6 +128,7 @@ background-attachment:fixed;
 
 .Pending{
 	border: 2px solid #999999;
+	/*border-bottom: 0px;*/
 	color: #999999;
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f0f0f0+0,ffffff+50 */
 background: #f0f0f0; /* Old browsers */
@@ -101,6 +163,8 @@ background: linear-gradient(to right,  #ffe5eb 0%,#ffffff 50%); /* W3C, IE10+, F
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffe5eb', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
 background-attachment:fixed;
 }
+
+
 /*
 tr {
 				width: 94% !important; 
