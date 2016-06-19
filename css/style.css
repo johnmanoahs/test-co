@@ -6,6 +6,12 @@ h4, .h4 {
   margin-top: 0 !important;
   font-weight: bolder; }
 
+div.min.Pending.ng-hide {
+  position: relative;
+  transition: top 1s;
+  top: 100px;
+  left: -600px; }
+
 .metricscomponent {
   float: left;
   border: 0px solid;
