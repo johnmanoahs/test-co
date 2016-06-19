@@ -64,7 +64,18 @@ var state = ['Pending', 'Completed', 'Running', 'Accepted', 'Rejected'];
 				<div class="edDivs {{row.build}}"><h4>Build</h4></div>
 				<div class="edDivs {{row.unit_test.state}}"><h4>Unit Test</h4></div>
 				<div class="edDivs {{row.fn_test.state}}"><h4>Functional Test</h4></div>
-				<div class="edDivs resultDiv"></div>
+				
+				<div class="edDivs resultDiv">
+					<p class="result">Result:</p>
+					<p class="rstate {{row.state}}">Change {{row.state}}</p>
+					<p class="rresult {{row.state}}">{{row.result}}</p>	
+					<div ng-show="row.state == 'Completed'">
+					<button type="button" class="btn btn-info">Deploy</button> to <br/><br/>
+					<select class="form-control"><option>Production</option><option>Staging</option></select>
+					</div>
+					<button type="button" class="btn btn-info" ng-show="row.state == 'Rejected'"><span class="glyphicon glyphicon-search"></span> Find Issues</button>
+					<button type="button" class="btn btn-info" ng-show="row.state == 'Accepted'"><span class="glyphicon glyphicon-search"></span> Merged Build</button>
+				</div>
 			</div>
 		</td>
 		</tr>
