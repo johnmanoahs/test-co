@@ -57,11 +57,46 @@ var state = ['Pending', 'Completed', 'Running', 'Accepted', 'Rejected'];
 			<div class="expanderDivWrapper clearfix" ng-show="selunselt">
 				<div class="edDivs {{row.state}}">
 					<h4>Metrics</h4>
+							<div class="row">
+		  <div class="col-md-6 arrow-up componentholder">{{row.metrics.test}}</div>
+		  <div class="col-md-6 arrow-down componentholder">{{row.metrics.maintainability}}</div>
+		</div>
+		<div class="row">
+		  <div class="col-md-6 componentlabel">Test</div>
+		  <div class="col-md-6 componentlabel">Maintainability</div>
+		</div>
+<br/>
+		<div class="row">
+		  <div class="col-md-6 arrow-right componentholder">{{row.metrics.security}}</div>
+		  <div class="col-md-6 arrow-right componentholder">{{row.metrics.workmanship}}</div>
+		</div>
+		<div class="row">
+		  <div class="col-md-6 componentlabel">Security</div>
+		  <div class="col-md-6 componentlabel">Workmanship</div>
+		</div>
+
+					<!--
 					<div class="clearfix">
-						<div class="arrow-up green"></div>
+						<div class="metricscomponent arrow-up test">{{row.metrics.test}}<p class="complabel">Test</p></div>
+						<div class="metricscomponent arrow-down maintainability">{{row.metrics.maintainability}}<p class="complabel">Maintainability</p></div>
 					</div>
+					-->
 				</div>
-				<div class="edDivs {{row.build}}"><h4>Build</h4></div>
+				
+				<div class="edDivs {{row.build}}">
+				<h4>Build</h4>
+				<div class="row">
+		  <div class="col-md-6 build"><span class="glyphicon glyphicon-blackboard"></span></div>
+		  <div class="col-md-6 build"><span class="glyphicon glyphicon-blackboard"></span></div>
+		</div>
+
+		<div class="row">
+		  <div class="col-md-6 build center">Debug</div>
+		  <div class="col-md-6 build center">Release</div>
+		</div>
+		<p class="buildtime">{{row.time_started | date : 'hh:mm a mm/dd/yyyy'}}</p>
+				</div>
+				
 				<div class="edDivs {{row.unit_test.state}}"><h4>Unit Test</h4></div>
 				<div class="edDivs {{row.fn_test.state}}"><h4>Functional Test</h4></div>
 				
