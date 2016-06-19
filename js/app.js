@@ -1,4 +1,4 @@
-var coApp = angular.module("coApp", []);
+var coApp = angular.module('coApp', []);
 
 coApp.service("coAppService", function($http, $q){
 	var deferred = $q.defer();
@@ -45,28 +45,47 @@ coApp.service("coAppService", function($http, $q){
 	//$scope.$watch()
 })
 
-coApp.directive("contentBoxes", function(){
-	var DomListenerFn = function(scope,element,attrs){
-		var zoomout1 = function(){
-			//console.log(this);
-			//alert('hi');
-			$(this).animate({
-				height: '+=50'
-			})
-		};
-		//console.log($('div.Pending').on('click', zoomout1));
-		console.log('sdf');
-		//$('#build_432462').on('click', zoomout1);
-		//$('#build_432462').trigger('click');
-		$('#one').on('click', zoomout1);
-		//$('#one').trigger('click')
-	};
+.controller("pieCtrl", function($scope){
+	  $scope.myJson = {
+        globals: {
+            shadow: false,
+            fontFamily: "Verdana",
+            fontWeight: "100"
+        },
+        type: "pie",
+        backgroundColor: "#fff",
 
-	return{
-		replace: false,
-		restrict: 'AEC',
-		controller: 'shCtrl',
-		link: DomListenerFn,
-		transclude: false
-	}
-})
+        legend: {
+            layout: "x5",
+            position: "50%",
+            borderColor: "transparent",
+            marker: {
+                borderRadius: 10,
+                borderColor: "transparent"
+            }
+        },
+        tooltip: {
+            text: "%v requests"
+        },
+        plot: {
+            refAngle: "-90",
+            borderWidth: "0px",
+            valueBox: {
+                placement: "in",
+                text: "%npv %",
+                fontSize: "15px",
+                textAlpha: 1,
+            }
+        },
+        series: [{
+            text: "10.0.0.80",
+            values: [4660],
+            backgroundColor: "#FA6E6E #FA9494",
+        }, {
+            text: "167.114.156.198",
+            values: [1807],
+            backgroundColor: "#F1C795 #feebd2"
+        }]
+    };
+});
+

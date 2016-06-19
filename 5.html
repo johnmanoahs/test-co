@@ -2,10 +2,16 @@
 <html lang="en" ng-app="coApp">
 	<head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<script src="js/angular.min.js"></script>		
+		<script src="js/jquery-3.0.0.min.js"></script>
+		<script src="js/angular.min.js"></script>
+		<!--<script src="js/angular-chart.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.2/Chart.min.js"></script>
+<script src="js/angular-chart.js"></script> -->
 		<script src="js/app.js"></script>
-		<script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/374756/zingchart-2.1.4.min.js"></script>
-		<script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/374756/zingchart-angularjs-1.0.4.js"></script>
+		<script>
+			var owner = [null, 'jtuck', 'samy'];
+var state = ['Pending', 'Completed', 'Running', 'Accepted', 'Rejected'];
+		</script>
 		<link href="css/style.css" rel="Stylesheet" />
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 	</head>
@@ -94,15 +100,7 @@
 		<p class="buildtime">{{row.time_started | date : 'hh:mm a mm/dd/yyyy'}}</p>
 				</div>
 				
-				<div class="edDivs {{row.unit_test.state}}">
-				<h4>Unit Test</h4>
-					<div ng-controller="pieCtrl">
-    <div zingchart id="chart-{{$index+1}}" zc-json="myJson" zc-width="100%" zc-height="120px"></div>
-  </div>
-
-
-				</div>
-				
+				<div class="edDivs {{row.unit_test.state}}"><h4>Unit Test</h4></div>
 				<div class="edDivs {{row.fn_test.state}}"><h4>Functional Test</h4></div>
 				
 				<div class="edDivs resultDiv">
@@ -148,8 +146,6 @@
 		</table>
 		</div>
 	</div>	
-
-	
 </div>
 
 </body>
